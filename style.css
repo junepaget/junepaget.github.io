@@ -40,3 +40,8 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+main img {
+    max-width: 60%;
+    height: auto;
+}
