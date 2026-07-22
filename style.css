@@ -35,14 +35,13 @@ nav a {
 
 
 main {
-    height: 80vh;
+     margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
 }
 
 main img {
-    max-width: 50%;
+    max-width: 45%;
     height: auto;
 }
