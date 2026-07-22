@@ -23,9 +23,36 @@
 
 <main>
     <h2>Work</h2>
+
+    <div class="work-grid">
+
+        <div class="work-piece">
+            <img src="untitled.jpeg" alt="Untitled">
+            <p>Untitled, 2025, Mixed media on Stonehenge paper, 30 × 50 in</p>
+        </div>
+
+    </div>
+
 </main>
 
 
 </body>
 
 </html>
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.work-piece img {
+    width: 100%;
+    height: auto;
+}
+
+.work-piece p {
+    font-size: 12px;
+    margin-top: 10px;
+}
