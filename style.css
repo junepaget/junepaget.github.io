@@ -82,6 +82,10 @@ h1 a {
 
 .featured-work p {
     align-self: flex-end;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 10px;
 }
 
 h3 {
