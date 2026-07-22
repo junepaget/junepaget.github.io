@@ -1,7 +1,7 @@
 body {
     background-color: #faf8f2;
     color: #111;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 40px;
 }
@@ -15,7 +15,8 @@ header {
 
 
 h1 {
-    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
     font-weight: normal;
     margin: 0;
 }
