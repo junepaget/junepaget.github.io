@@ -73,10 +73,21 @@ h1 a {
     margin-top: 10px;
 }
 
+.home-image {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
 .featured-work {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.featured-work p {
+    font-size: 12px;
+    margin-top: 10px;
 }
 
 h3 {
