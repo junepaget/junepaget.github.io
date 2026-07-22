@@ -1,0 +1,28 @@
+body {
+    background-color: #faf8f2;
+    color: #111;
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    text-align: center;
+    margin-top: 80px;
+}
