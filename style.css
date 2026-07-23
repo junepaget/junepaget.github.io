@@ -179,8 +179,7 @@ h2 {
 
 #lightbox-series img {
     width: 100%;
-    height: auto;
-    max-height: 35vh;
+    aspect-ratio: 3 / 4;
     object-fit: contain;
 }
 
