@@ -109,31 +109,25 @@ images.forEach(image => {
         const hiddenImages = parent.querySelectorAll(".hidden-series img");
         const caption = parent.querySelector("p");
 
-        if (hiddenImages.length > 0) {
+      if (hiddenImages.length > 0) {
 
-            hiddenImages.forEach(img => {
+    lightboxSeries.classList.add("series-view");
 
-                const newImg = document.createElement("img");
-                newImg.src = img.src;
+    lightboxSeries.innerHTML = "";
 
-                newImg.onclick = (event) => {
-                    event.stopPropagation();
+    const allImages = [image, ...hiddenImages];
 
-                    lightboxSeries.innerHTML = "";
-                    lightboxSeries.appendChild(newImg.cloneNode());
-                    lightboxSeries.classList.add("single-view");
-                };
+    allImages.forEach(img => {
+        lightboxSeries.innerHTML += `<img src="${img.src}">`;
+    });
 
-                lightboxSeries.appendChild(newImg);
+} else {
 
-            });
+    lightboxSeries.classList.remove("series-view");
 
-        } else {
+    lightboxSeries.innerHTML = `<img src="${image.src}">`;
 
-            lightboxSeries.innerHTML = `<img src="${image.src}">`;
-
-        }
-
+}
         lightboxCaption.innerHTML = caption.innerHTML;
 
         lightbox.style.display = "flex";
