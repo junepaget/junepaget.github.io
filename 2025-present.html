@@ -87,16 +87,40 @@
 
 const images = document.querySelectorAll(".art-image");
 const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightbox-image");
+const lightboxSeries = document.getElementById("lightbox-series");
 const lightboxCaption = document.getElementById("lightbox-caption");
 
 images.forEach(image => {
+
     image.onclick = () => {
-        lightboxImage.src = image.src;
+
+        lightboxSeries.innerHTML = "";
+
+        const parent = image.parentElement;
+        const hiddenImages = parent.querySelectorAll(".hidden-series img");
+
+        if (hiddenImages.length > 0) {
+
+            lightboxSeries.innerHTML += `<img src="${image.src}">`;
+
+            hiddenImages.forEach(img => {
+                lightboxSeries.innerHTML += `<img src="${img.src}">`;
+            });
+
+        } else {
+
+            lightboxSeries.innerHTML = `<img src="${image.src}">`;
+
+        }
+
         lightboxCaption.innerHTML = image.nextElementSibling.innerHTML;
+
         lightbox.style.display = "flex";
+
     };
+
 });
+
 
 lightbox.onclick = () => {
     lightbox.style.display = "none";
