@@ -45,10 +45,22 @@ h1 a {
 }
 
 .work-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    columns: 2;
+    column-gap: 50px;
     margin-top: 50px;
+}
+
+.work-piece {
+    break-inside: avoid;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-piece img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .work-piece {
@@ -115,33 +127,6 @@ h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    margin-top: 80px;
-}
-
-.category-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-top: 60px;
-    margin-bottom: 80px;
-}
-
-.category-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
     margin-top: 80px;
 }
 
