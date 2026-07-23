@@ -86,7 +86,7 @@
 
 <div class="lightbox" id="lightbox">
     <div class="lightbox-content">
-        <img id="lightbox-image" src="">
+        <div id="lightbox-series"></div>
         <p id="lightbox-caption"></p>
     </div>
 </div>
@@ -96,16 +96,52 @@
 
 const images = document.querySelectorAll(".art-image");
 const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightbox-image");
+const lightboxSeries = document.getElementById("lightbox-series");
 const lightboxCaption = document.getElementById("lightbox-caption");
 
 images.forEach(image => {
+
     image.onclick = () => {
-        lightboxImage.src = image.src;
-        lightboxCaption.innerHTML = image.nextElementSibling.innerHTML;
+
+        lightboxSeries.innerHTML = "";
+
+        const parent = image.closest(".work-piece");
+        const hiddenImages = parent.querySelectorAll(".hidden-series img");
+        const caption = parent.querySelector("p");
+
+        if (hiddenImages.length > 0) {
+
+            hiddenImages.forEach(img => {
+
+                const newImg = document.createElement("img");
+                newImg.src = img.src;
+
+                newImg.onclick = (event) => {
+                    event.stopPropagation();
+
+                    lightboxSeries.innerHTML = "";
+                    lightboxSeries.appendChild(newImg.cloneNode());
+                    lightboxSeries.classList.add("single-view");
+                };
+
+                lightboxSeries.appendChild(newImg);
+
+            });
+
+        } else {
+
+            lightboxSeries.innerHTML = `<img src="${image.src}">`;
+
+        }
+
+        lightboxCaption.innerHTML = caption.innerHTML;
+
         lightbox.style.display = "flex";
+
     };
+
 });
+
 
 lightbox.onclick = () => {
     lightbox.style.display = "none";
