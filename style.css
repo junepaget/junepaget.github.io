@@ -148,12 +148,12 @@ h2 {
     background: rgba(255, 255, 255, 0.95);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 
 .lightbox img {
-    max-width: 85%;
-    max-height: 85%;
+    max-width: 70vw;
+    max-height: 80vh;
     object-fit: contain;
 }
