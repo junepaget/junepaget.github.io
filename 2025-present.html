@@ -102,10 +102,21 @@ images.forEach(image => {
 
         if (hiddenImages.length > 0) {
 
-            lightboxSeries.innerHTML += `<img class="series-print" src="${image.src}">`;
-
             hiddenImages.forEach(img => {
-                lightboxSeries.innerHTML += `<img class="series-print" src="${img.src}">`;
+
+                const newImg = document.createElement("img");
+                newImg.src = img.src;
+
+                newImg.onclick = (event) => {
+                    event.stopPropagation();
+
+                    lightboxSeries.innerHTML = "";
+                    lightboxSeries.appendChild(newImg.cloneNode());
+                    lightboxSeries.classList.add("single-view");
+                };
+
+                lightboxSeries.appendChild(newImg);
+
             });
 
         } else {
