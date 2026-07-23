@@ -32,7 +32,7 @@
 <div class="work-grid">
 
     <div class="work-piece">
-        <img class= "art-image" src="my-reflection-is-an-archive-of-borrowed-evidence.jpeg" alt="My Reflection is an Archive of Borrowed Evidence">
+        <img class="art-image" src="my-reflection-is-an-archive-of-borrowed-evidence.jpeg" alt="My Reflection is an Archive of Borrowed Evidence">
         <p>My Reflection is an Archive of Borrowed Evidence, 2026, Oil on canvas, 30 × 30 in</p>
     </div>
 
@@ -84,14 +84,15 @@
 const images = document.querySelectorAll(".art-image");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
+const lightboxCaption = document.getElementById("lightbox-caption");
 
 images.forEach(image => {
     image.onclick = () => {
         lightboxImage.src = image.src;
+        lightboxCaption.innerHTML = image.nextElementSibling.innerHTML;
         lightbox.style.display = "flex";
     };
 });
-
 
 lightbox.onclick = () => {
     lightbox.style.display = "none";
