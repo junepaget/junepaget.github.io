@@ -138,6 +138,8 @@ h2 {
 }
 
 .lightbox img {
+    max-width: 85vw;
+    max-height: 80vh;
     object-fit: contain;
 }
 
