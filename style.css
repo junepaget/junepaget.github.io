@@ -173,6 +173,12 @@ h2 {
 }
 
 #lightbox-series {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox-series.series-view {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -199,3 +205,4 @@ h2 {
     max-width: 80vw;
     max-height: 80vh;
 }
+
