@@ -181,8 +181,10 @@ h2 {
 }
 
 #lightbox-series img {
-    width: 100%;
-    aspect-ratio: 3 / 4;
+    max-width: 80vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
 }
 
