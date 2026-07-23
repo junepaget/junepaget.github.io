@@ -76,6 +76,30 @@
 </main>
 
 
-</body>
+<div class="lightbox" id="lightbox">
+    <img id="lightbox-image" src="">
+</div>
 
+
+<script>
+
+const images = document.querySelectorAll(".art-image");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+
+images.forEach(image => {
+    image.onclick = () => {
+        lightboxImage.src = image.src;
+        lightbox.style.display = "flex";
+    };
+});
+
+
+lightbox.onclick = () => {
+    lightbox.style.display = "none";
+};
+
+</script>
+
+</body>
 </html>
