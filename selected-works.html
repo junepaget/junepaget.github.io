@@ -89,14 +89,15 @@
 const images = document.querySelectorAll(".art-image");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
+const lightboxCaption = document.getElementById("lightbox-caption");
 
 images.forEach(image => {
     image.onclick = () => {
         lightboxImage.src = image.src;
+        lightboxCaption.innerHTML = image.nextElementSibling.innerHTML;
         lightbox.style.display = "flex";
     };
 });
-
 
 lightbox.onclick = () => {
     lightbox.style.display = "none";
