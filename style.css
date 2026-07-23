@@ -135,3 +135,25 @@ h2 {
     height: auto;
     display: block;
 }
+
+.art-image {
+    cursor: zoom-in;
+}
+
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+}
