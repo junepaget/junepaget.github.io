@@ -115,7 +115,7 @@ images.forEach(image => {
 
     lightboxSeries.innerHTML = "";
 
-    const allImages = [image, ...hiddenImages];
+    const allImages = [...hiddenImages];
 
     allImages.forEach(img => {
         lightboxSeries.innerHTML += `<img src="${img.src}">`;
