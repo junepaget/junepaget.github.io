@@ -176,19 +176,20 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90vw;
 }
 
 #lightbox-series.series-view {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    width: 70vw;
-    max-height: 75vh;
+    width: 90vw;
+    max-height: 65vh;
 }
 
-#lightbox-series img {
-    max-width: 80vw;
-    max-height: 80vh;
+#lightbox-series.series-view img {
+    max-width: 20vw;
+    max-height: 65vh;
     width: auto;
     height: auto;
     object-fit: contain;
