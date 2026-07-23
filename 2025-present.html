@@ -61,6 +61,7 @@
     <img class="art-image" src="a-womb-of-borrowed-bodies-1.jpeg" alt="A Womb of Borrowed Bodies">
 
     <div class="hidden-series">
+        <img src="a-womb-of-borrowed-bodies-1.jpeg">
         <img src="a-womb-of-borrowed-bodies-2.jpg">
         <img src="a-womb-of-borrowed-bodies-3.jpg">
         <img src="a-womb-of-borrowed-bodies-4.jpeg">
@@ -104,7 +105,7 @@ images.forEach(image => {
 
     lightboxSeries.innerHTML = "";
 
-    const allImages = [image, ...hiddenImages];
+    const allImages = [...hiddenImages];
 
     allImages.forEach(img => {
         lightboxSeries.innerHTML += `<img src="${img.src}">`;
