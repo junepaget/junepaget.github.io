@@ -137,10 +137,7 @@ h2 {
     z-index: 9999;
 }
 
-
 .lightbox img {
-    max-width: 70vw;
-    max-height: 80vh;
     object-fit: contain;
 }
 
@@ -170,4 +167,18 @@ h2 {
 
 .hidden-series {
     display: none;
+}
+
+#lightbox-series {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 80vw;
+    max-height: 75vh;
+}
+
+#lightbox-series img {
+    max-width: 35vw;
+    max-height: 35vh;
+    object-fit: contain;
 }
