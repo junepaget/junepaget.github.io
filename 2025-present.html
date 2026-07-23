@@ -102,10 +102,10 @@ images.forEach(image => {
 
         if (hiddenImages.length > 0) {
 
-            lightboxSeries.innerHTML += `<img src="${image.src}">`;
+            lightboxSeries.innerHTML += `<img class="series-print" src="${image.src}">`;
 
             hiddenImages.forEach(img => {
-                lightboxSeries.innerHTML += `<img src="${img.src}">`;
+                lightboxSeries.innerHTML += `<img class="series-print" src="${img.src}">`;
             });
 
         } else {
