@@ -162,3 +162,12 @@ h2 {
     margin-top: 15px;
     text-align: center;
 }
+
+.art-image {
+    cursor: zoom-in;
+    transition: opacity 0.3s ease;
+}
+
+.art-image:hover {
+    opacity: 0.85;
+}
