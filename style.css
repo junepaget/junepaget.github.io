@@ -137,3 +137,16 @@ h2 {
     height: auto;
     display: block;
 }
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 80px;
+}
+
+.category-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
