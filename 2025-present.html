@@ -100,30 +100,21 @@ images.forEach(image => {
         const hiddenImages = parent.querySelectorAll(".hidden-series img");
         const caption = parent.querySelector("p");
 
-        if (hiddenImages.length > 0) {
+       if (hiddenImages.length > 0) {
 
-            hiddenImages.forEach(img => {
+    lightboxSeries.innerHTML = "";
 
-                const newImg = document.createElement("img");
-                newImg.src = img.src;
+    const allImages = [image, ...hiddenImages];
 
-                newImg.onclick = (event) => {
-                    event.stopPropagation();
+    allImages.forEach(img => {
+        lightboxSeries.innerHTML += `<img src="${img.src}">`;
+    });
 
-                    lightboxSeries.innerHTML = "";
-                    lightboxSeries.appendChild(newImg.cloneNode());
-                    lightboxSeries.classList.add("single-view");
-                };
+} else {
 
-                lightboxSeries.appendChild(newImg);
+    lightboxSeries.innerHTML = `<img src="${image.src}">`;
 
-            });
-
-        } else {
-
-            lightboxSeries.innerHTML = `<img src="${image.src}">`;
-
-        }
+}
 
         lightboxCaption.innerHTML = caption.innerHTML;
 
