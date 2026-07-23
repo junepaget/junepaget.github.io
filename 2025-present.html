@@ -66,7 +66,6 @@
     <img class="art-image" src="a-womb-of-borrowed-bodies-1.jpeg" alt="A Womb of Borrowed Bodies">
 
     <div class="hidden-series">
-        <img src="a-womb-of-borrowed-bodies-1.jpeg">
         <img src="a-womb-of-borrowed-bodies-2.jpg">
         <img src="a-womb-of-borrowed-bodies-3.jpg">
         <img src="a-womb-of-borrowed-bodies-4.jpeg">
@@ -110,13 +109,24 @@ images.forEach(image => {
 
     lightboxSeries.innerHTML = "";
 
-    const allImages = [...hiddenImages];
+    if (image.alt === "A Womb of Borrowed Bodies") {
+        lightboxSeries.classList.add("womb-view");
+        lightboxSeries.classList.remove("series-view");
+    } else {
+        lightboxSeries.classList.add("series-view");
+        lightboxSeries.classList.remove("womb-view");
+    }
+
+    const allImages = [image, ...hiddenImages];
 
     allImages.forEach(img => {
         lightboxSeries.innerHTML += `<img src="${img.src}">`;
     });
 
 } else {
+
+    lightboxSeries.classList.remove("womb-view");
+    lightboxSeries.classList.remove("series-view");
 
     lightboxSeries.innerHTML = `<img src="${image.src}">`;
 
